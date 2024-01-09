@@ -312,6 +312,73 @@ env.COMBAT_ACTORS.miltza.reactions = {
     receive_redirection: ["what? red fabric??", "watch this simple trick"],
 }
 
+/* golem maintenance expansion */
+env.COMBAT_ACTORS.bozko.reactions = {
+    regen: ["..."],
+    evade: ["no", "not so easy"],
+    crit: ["get away from them", "smashed to pieces"],
+    crit_buff: ["take this"],
+    miss: ["ÃŸÃÆ’"],
+    destabilized: ["..."],
+    dead: ["..."],
+    receive_rez: ["get back up..."],
+    receive_crit: ["you!"],
+    receive_puncture: [
+        ()=>env.combat.has('cavik') ? "cavik!" : "it punched through..." 
+    ],
+    receive_buff: ["keep it up"],
+    receive_destabilized: ["i hear them again..."],
+    puncture: ["blood everywhere"],
+    stun: ["what--"],
+    receive_carapace: ["good"],
+    receive_repairs: ["..."],
+    receive_fear: ["no...", "stay back!", "...", "is it really you...?"],
+    receive_spikes: ["come on", "strike me now..."],
+    give_redirection: ["stay behind", "look at me!"],
+}
+
+env.COMBAT_ACTORS.cavik.reactions = {
+    receive_hit: ["ow!!"],
+    regen: ["coming together again!"],
+    evade: ["oh!!", "what?!"],
+    crit: ["i got you!"],
+    crit_buff: ["this should help!"],
+    miss: ["ah!"],
+    destabilized: ["..."],
+    dead: ["..."],
+    receive_rez: ["what happened?!", "i am back..?"],
+    receive_crit: ["ow, ow!!!"],
+    receive_puncture: ["oh no..."],
+    receive_buff: ["thank you!"],
+    receive_destabilized: ["it hurts", "hurts", "someone is there", "i feel you", "i cannot wake up"],
+    puncture: ["i need to seal this!"],
+    stun: ["whhaahh"],
+    receive_fear: ["akizet!!", "i... i remember you...", "keep it away from me!", "h--help me!", "no, no no no"],
+    receive_redirection: ["thank you, bozko!", "i will cover you!"],
+}
+
+env.COMBAT_ACTORS.ikgolem.reactions = {
+    receive_rez: ["ah, it works again!"],
+    regen: ["much better"],
+    evade: ["stop that!", "deflected!"],
+    crit: ["ahaha...", "incredible!"],
+    crit_buff: ["i hope that helps!"],
+    miss: ["Ã·Â°Ã²!!"],
+    destabilized: ["..."],
+    dead: ["no! get up, get up!", "the body is not responding!!"],
+    receive_crit: ["how--?!"],
+    receive_puncture: ["the chassis!!"],
+    receive_buff: ["excellent"],
+    receive_destabilized: ["something is so wrong..."],
+    puncture: ["losing cohesion fast!"],
+    stun: ["it will not respond!!"],
+    receive_carapace: ["more armor! yes!"],
+    receive_repairs: ["thank you, thank you"],
+    receive_fear: ["what did this to you?!", "i feel sick..."],
+    receive_redirection: ["what?", "unnecessary, but thanks"],
+}
+
+
 ////////// DIALOGUE //////////
 env.dialogues["genericenemy"] = generateDialogueObject(`
 start
